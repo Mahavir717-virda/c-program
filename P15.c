@@ -1,40 +1,51 @@
-#include<stdio.h>
+#include <stdio.h>
 int main()
 {
-    int arr[25];
-    int p=0;
-    int e=0;
-    int o=0;
-    int n=0;
+    int n;
+    printf("Welcome to the Foodies Restaurant.\n");
+    printf("here is the ordering menu list.");
+    printf(" We have Burger - 150\nPizza - 200\nPasta - 120\nSandwich - 100\nfrench Fries - 80");
+    int menu;
+    printf("Press 1 for burger.\n");
+    printf("Press 2 for Pizza.\n");
+    printf("Press 3 for Pasta.\n");
+    printf("Press 4 for Sandwitch.\n");
+    printf("Press 5 for French Fries.\n");
+    printf("Press 0 for finishing the order.\n");
 
-    for(int i=0;i<25;i++)
+    int i = 0;
+    while (1)
     {
-        printf("Enter %d Number : ",i+1);
-        scanf("%d",&arr[i]);
-        if(arr[i]%2 == 0)
-        {
-            e++;
-        }
-        else
-        {
-            o++;
-        }
-        if(arr[i] > 0)
-        {
-            p++;
-        }
-        else
-        {
-            n++;
-        }
-        
+        scanf("%d", &menu);
 
+        switch (menu)
+        {
+        case 1:
+            printf("Burger added to your order.");
+            i += 150;
+            break;
+        case 2:
+            printf("Pizza added to your order.");
+            i += 180;
+            break;
+        case 3:
+            printf("Pasta added to your order.");
+            i += 200;
+            break;
+        case 4:
+            printf("Sandwitch added to your order.");
+            i += 100;
+            break;
+        case 5:
+            printf("French fries added to your order.");
+            i += 80;
+            break;
+        case 0:
+            printf(" your order is finished.");
+            printf("yor bill is %d", i);
+            break;
+        default:    printf("enter between 0 to 5");
+        }
     }
-    printf("There are %d numbers are even.\n",e);
-    printf("There are %d numbers are positive.\n",p);
-    printf("There are %d numbers are negative.\n",n);
-    printf("There are %d numbers are odd.\n",o);
-     printf("NAME : Virda Mahavir");
-    printf("ID : 24TCEZWT ");
     return 0;
 }
